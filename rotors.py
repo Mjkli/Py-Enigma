@@ -39,6 +39,11 @@ def rotateRotor(dic):
                    dic[l[i]] = dic[l[i+1]]
         
         dic[tempVal] = temp
+
+def rotorRun(char,dic):
+    return dic.get(char)
+
+
         
                 
                 

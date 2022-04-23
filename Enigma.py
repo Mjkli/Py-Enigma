@@ -29,9 +29,9 @@ while 1:
     char = char.upper()
 
     if(char.isalpha()):
-        print(plugboardRun(char,pb))
+        print(plugboardRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(plugboardRun(char,pb),rotor1),rotor2),rotor3),reflector),rotor3),rotor2),rotor1),pb))
 
-
+    
 
 
 
