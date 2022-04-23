@@ -5,11 +5,11 @@
 # run file through
 
 from plugboard import setBoard
-from rotors import setRotors
+from rotors import *
 
 pb = {}
 
-print("Connecting Plugboard:")
+#print("Connecting Plugboard:")
 pb = setBoard()
 rotor1 = {}
 rotor2 = {}
@@ -18,8 +18,7 @@ reflector = {}
 rotor1, rotor2, rotor3, reflector = setRotors()
 
 
-
-
+rotor1 = rotateRotor(rotor1)
 
 
 

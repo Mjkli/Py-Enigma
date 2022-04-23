@@ -45,16 +45,7 @@ def customBoard():
         D -
         E - 
     """
-
-
-
-
-pb = TwoWayDict()
-
-pb = setBoard()
-
-print(pb)
-
+    
 #print("Connecting Plugboard:")
 #choice = input("Use preset settings (y/n) - ")
 
