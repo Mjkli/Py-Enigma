@@ -1,6 +1,7 @@
 
 # plugboard should map a character to another character.
 # A -> E
+# E -> A
 # This is mapped before the rotors and After the rotors
 # dictionary = hashtable
 class TwoWayDict(dict):
@@ -22,9 +23,16 @@ class TwoWayDict(dict):
         return dict.__len__(self) // 2
 
 def setBoard():
+    board = TwoWayDict()
     al = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     la = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
-    
+    for i in range(0,25):
+        board[al[i]] = la[i]
+
+    return board
+
+
+
 
 def customBoard():
     """
@@ -41,7 +49,11 @@ def customBoard():
 
 
 
-#pb = {}
+pb = TwoWayDict()
+
+pb = setBoard()
+
+print(pb)
 
 #print("Connecting Plugboard:")
 #choice = input("Use preset settings (y/n) - ")
