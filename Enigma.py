@@ -4,7 +4,7 @@
 # build plugboard
 # run file through
 
-from plugboard import setBoard
+from plugboard import *
 from rotors import *
 
 pb = {}
@@ -18,9 +18,25 @@ reflector = {}
 rotor1, rotor2, rotor3, reflector = setRotors()
 
 
-rotor1 = rotateRotor(rotor1)
+file = open('Unencrypted.txt','r')
 
 
+
+while 1:
+    char = file.read(1)
+    if not char:
+        break
+    char = char.upper()
+
+    if(char.isalpha()):
+        print(plugboardRun(char,pb))
+
+
+
+
+
+
+file.close()
 
 
 

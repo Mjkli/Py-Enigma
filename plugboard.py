@@ -31,6 +31,9 @@ def setBoard():
 
     return board
 
+def plugboardRun(char,board):
+    return board.get(char)
+
 
 
 
