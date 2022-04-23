@@ -29,7 +29,7 @@ def setRotors():
         return rotor1,rotor2,rotor3,reflector
 
 def rotateRotor(dic):
-        print(dic)
+        #print(dic)
         l = list(dic.keys())
         temp = dic[l[0]]
         tempVal = l[l.__len__() - 1]
