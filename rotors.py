@@ -36,12 +36,9 @@ def rotateRotor(dic):
         
         
         for i in range(0,dic.__len__() - 1):
-                   #print(str(dic[l[i]]) + " - " + str(dic[l[i + 1]]))
                    dic[l[i]] = dic[l[i+1]]
         
         dic[tempVal] = temp
-
-        print(dic)
         
                 
                 
