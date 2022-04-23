@@ -19,6 +19,7 @@ rotor1, rotor2, rotor3, reflector = setRotors()
 
 
 file = open('Unencrypted.txt','r')
+out = open('encrypted.txt', 'w')
 
 
 
@@ -29,14 +30,17 @@ while 1:
     char = char.upper()
 
     if(char.isalpha()):
-        print(plugboardRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(plugboardRun(char,pb),rotor1),rotor2),rotor3),reflector),rotor3),rotor2),rotor1),pb))
-
-    
+        temp = char
+        char = plugboardRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(plugboardRun(char,pb),rotor1),rotor2),rotor3),reflector),rotor3),rotor2),rotor1),pb)
+        #print(char)
+        
+    out.write(str(char))
 
 
 
 
 file.close()
+out.close()
 
 
 
