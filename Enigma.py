@@ -23,10 +23,10 @@ rotor1, rotor1b,rotor2, rotor2b,rotor3, rotor3b, reflector = setRotors()
 #print(rotor1)
 #print(rotor1b)
 
-#file = open('test.txt','r')
-file = open('encrypted2.txt','r')
-#out = open('encrypted2.txt', 'w')
-out = open('test.txt', 'a')
+#file = open('Unencrypted.txt','r')
+file = open('encrypted.txt','r')
+#out = open('encrypted.txt', 'w')
+out = open('test.txt', 'w')
 
 #char = "J"
 
@@ -38,18 +38,15 @@ while 1:
     char = char.upper()
     #print(char)
     if(char.isalpha()):
-        char = rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(char,rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b)
-        out.write(str(char))
-        rotateRotor(rotor1,rotor1b)
-        #rotateRotor(rotor1b)
-        #if(rt % 26 == 0):
-            #rotateRotor(rotor2)
-            #rotateRotor(rotor2b)
-        #if(rt % 646 == 0):
-            #rotateRotor(rotor3)
-            #rotateRotor(rotor3b)
+        char = plugboardRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(plugboardRun(char,pb),rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b),pb)
+    
+    out.write(str(char))
+    rotateRotor(rotor1,rotor1b)
+    if(rt % 26 == 0):
+        rotateRotor(rotor2,rotor2b)
+    if(rt % 646 == 0):
+        rotateRotor(rotor3,rotor3b)
     rt += 1
-#print(char)
 
 
 file.close()
