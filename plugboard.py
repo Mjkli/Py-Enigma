@@ -4,6 +4,8 @@
 # E -> A
 # This is mapped before the rotors and After the rotors
 # dictionary = hashtable
+
+
 class TwoWayDict(dict):
     """Class defines a two way dictionary."""
     def __setitem__(self, key, value):
@@ -23,13 +25,15 @@ class TwoWayDict(dict):
         """Returns the number of connections"""
         return dict.__len__(self) // 2
 
+
 def set_board():
     """Sets up plugboard"""
     board = TwoWayDict()
     alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     backwards_alpha = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
-    for i in range(0,25):
+    for i in range(0, 25):
         board[alpha[i]] = backwards_alpha[i]
+
 
     return board
 
@@ -38,26 +42,24 @@ def plugboard_run(char,board):
     return board.get(char)
 
 
+#def custom_board():
+    #
+    #    Later iterations should have something like this as output for User:
+    #    this will help them keep track of what needs connecting.
+    #    Also
+    #    A -
+    #    B -
+    #    C -
+    #    D -
+    #    E -
+    #
+# print("Connecting Plugboard:")
+# choice = input("Use preset settings (y/n) - ")
 
-
-def custom_board():
-    """
-        Later iterations should have something like this as output for User:
-        this will help them keep track of what needs connecting.
-        Also
-        A -
-        B -
-        C -
-        D -
-        E -
-    """
-#print("Connecting Plugboard:")
-#choice = input("Use preset settings (y/n) - ")
-
-#if(choice == "y"):
+# if(choice == "y"):
 #    pb = setBoard()
-#else:
+# else:
 #    customBoard()
 
 
-#print(pb)
+# print(pb)

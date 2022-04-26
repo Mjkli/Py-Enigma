@@ -8,6 +8,8 @@ IV    = ESOVPZJAYQUIRHXLNFTGKDCMWB
 V     = VZBRGITYUPSDNHLXAWMJQOFECK
 UKW-B = YRUHQSLDPXNGOKMIEBFZCWVJAT
 """
+
+
 def set_rotors():
     """setup rotors"""
 
@@ -32,9 +34,10 @@ def set_rotors():
         rotor3b[r3_set[i]] = alpha[i]
         reflector[alpha[i]] = re_set[i]
 
-    return rotor1,rotor1b,rotor2,rotor2b,rotor3,rotor3b,reflector
+    return rotor1, rotor1b, rotor2, rotor2b, rotor3, rotor3b, reflector
 
-def rotate_rotor(dic,dicb):
+
+def rotate_rotor(dic, dicb):
     """function rotates rotors"""
     forward = list(dic.keys())
     backward = list(dicb.keys())
