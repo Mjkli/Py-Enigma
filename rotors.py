@@ -25,7 +25,7 @@ def set_rotors():
     rotor3 = {}
     rotor3b = {}
     reflector = {}
-    for i in range(0,26):
+    for i in range(0, 26):
         rotor1[alpha[i]] = r1_set[i]
         rotor1b[r1_set[i]] = alpha[i]
         rotor2[alpha[i]] = r2_set[i]
@@ -44,7 +44,7 @@ def rotate_rotor(dic, dicb):
     temp_key = dic[forward[0]]
     temp_value = forward[forward.__len__() - 1]
 
-    for i in range(0,dic.__len__() - 1):
+    for i in range(0, dic.__len__() - 1):
         dic[forward[i]] = dic[forward[i+1]]
         dic[temp_value] = temp_key
     temp_key = backward[0]
@@ -56,6 +56,6 @@ def rotate_rotor(dic, dicb):
     dicb[temp_key] = temp_value
 
 
-def rotor_run(char,dic):
+def rotor_run(char, dic):
     """Gets value of rotor"""
     return dic.get(char)

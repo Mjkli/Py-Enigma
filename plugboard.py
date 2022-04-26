@@ -36,7 +36,8 @@ def set_board():
 
     return board
 
-def plugboard_run(char,board):
+
+def plugboard_run(char, board):
     """returns plugboard value"""
     return board.get(char)
 
