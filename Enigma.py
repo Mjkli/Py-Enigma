@@ -4,8 +4,8 @@
 # build plugboard
 # run file through
 
-from plugboard import *
-from rotors import *
+from plugboard import set_board,plugboard_run,custom_board
+from rotors import rotor_run,rotate_rotor,set_rotors
 
 pb = {}
 
@@ -36,15 +36,14 @@ while 1:
     if not char:
         break
     char = char.upper()
-    #print(char)
-    if(char.isalpha()):
+    if char.isalpha():
         char = plugboardRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(rotorRun(plugboardRun(char,pb),rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b),pb)
     
     out.write(str(char))
     rotateRotor(rotor1,rotor1b)
-    if(rt % 26 == 0):
+    if rt % 26 == 0:
         rotateRotor(rotor2,rotor2b)
-    if(rt % 646 == 0):
+    if rt % 646 == 0:
         rotateRotor(rotor3,rotor3b)
     rt += 1
 
@@ -62,6 +61,3 @@ out.close()
 #    pb = setBoard()
 #else:
 #    customBoard()
-
-
-

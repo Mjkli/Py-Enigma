@@ -4,7 +4,7 @@
 # E -> A
 # This is mapped before the rotors and After the rotors
 # dictionary = hashtable
-class TwoWayDict(dict):
+class two_way_dict(dict):
     def __setitem__(self, key, value):
         # Remove any previous connections with these values
         if key in self:
@@ -22,31 +22,33 @@ class TwoWayDict(dict):
         """Returns the number of connections"""
         return dict.__len__(self) // 2
 
-def setBoard():
-    board = TwoWayDict()
-    al = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    la = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
+def set_board():
+    """Sets up plugboard"""
+    board = two_way_dict()
+    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    backwards_alpha = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
     for i in range(0,25):
-        board[al[i]] = la[i]
+        board[alpha[i]] = backwards_alpha[i]
 
     return board
 
-def plugboardRun(char,board):
+def plugboard_run(char,board):
+    """returns plugboard value"""
     return board.get(char)
 
 
 
 
-def customBoard():
+def custom_board():
     """
         Later iterations should have something like this as output for User:
         this will help them keep track of what needs connecting.
         Also
-        A - 
-        B - 
-        C - 
+        A -
+        B -
+        C -
         D -
-        E - 
+        E -
     """
     
 #print("Connecting Plugboard:")
