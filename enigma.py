@@ -27,7 +27,7 @@ with open("Unencrypted.txt", 'r', encoding='utf-8') as file, \
             char = plugboard_run(rotor_run(rotor_run(rotor_run(
                    rotor_run(rotor_run(rotor_run(rotor_run(
                     plugboard_run(char, pb),
-                        rotor1), rotor2), rotor3), reflector), rotor3b), rotor2b), rotor1b), pb)
+                    rotor1), rotor2), rotor3), reflector), rotor3b), rotor2b), rotor1b), pb)
 
         out.write(str(char))
         rotate_rotor(rotor1, rotor1b)
