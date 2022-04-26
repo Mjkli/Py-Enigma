@@ -34,7 +34,6 @@ def set_board():
     for i in range(0, 25):
         board[alpha[i]] = backwards_alpha[i]
 
-
     return board
 
 def plugboard_run(char,board):
@@ -42,7 +41,7 @@ def plugboard_run(char,board):
     return board.get(char)
 
 
-#def custom_board():
+# def custom_board():
     #
     #    Later iterations should have something like this as output for User:
     #    this will help them keep track of what needs connecting.
