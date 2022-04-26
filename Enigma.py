@@ -11,13 +11,6 @@ pb = {}
 
 #print("Connecting Plugboard:")
 pb = set_board()
-#rotor1 = {}
-#rotor1b = {}
-#rotor2 = {}
-#rotor2b = {}
-#rotor3 = {}
-#rotor3b = {}
-#reflector = {}
 rotor1, rotor1b,rotor2, rotor2b,rotor3, rotor3b, reflector = set_rotors()
 
 #print(rotor1)
@@ -51,10 +44,3 @@ while 1:
 
 file.close()
 out.close()
-
-#choice = input("Use preset settings (y/n) - ")
-
-#if(choice == "y"):
-#    pb = setBoard()
-#else:
-#    customBoard()
