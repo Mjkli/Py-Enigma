@@ -56,4 +56,3 @@ def rotate_rotor(dic,dicb):
 def rotor_run(char,dic):
     """Gets value of rotor"""
     return dic.get(char)
-

@@ -1,10 +1,10 @@
-# Re-creating My enigma encode project in Python
+"""Re-creating My enigma encode project in Python"""
 
 # build rotors
 # build plugboard
 # run file through
 
-from plugboard import set_board,plugboard_run,custom_board
+from plugboard import set_board,plugboard_run
 from rotors import rotor_run,rotate_rotor,set_rotors
 
 pb = {}
@@ -30,7 +30,7 @@ out = open('test.txt', 'w',encoding='utf-8')
 
 #char = "J"
 
-keys = 1 # Keeps track of how many times a key has been pressed to rotate the rotors
+KEYS = 1 # Keeps track of how many times a key has been pressed to rotate the rotors
 while 1:
     char = file.read(1)
     if not char:
@@ -43,11 +43,11 @@ while 1:
 
     out.write(str(char))
     rotate_rotor(rotor1,rotor1b)
-    if keys % 26 == 0:
+    if KEYS % 26 == 0:
         rotate_rotor(rotor2,rotor2b)
-    if keys % 646 == 0:
+    if KEYS % 646 == 0:
         rotate_rotor(rotor3,rotor3b)
-    keys += 1
+    KEYS += 1
 
 file.close()
 out.close()
