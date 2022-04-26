@@ -21,7 +21,7 @@ with open("Unencrypted.txt",'r',encoding='utf-8') as file, \
     while 1:
         char = file.read(1)
         if not char:
-           break
+            break
         char = char.upper()
         if char.isalpha():
             char = plugboard_run(rotor_run(rotor_run(rotor_run(
