@@ -1,10 +1,11 @@
-
+"""This file defines the plugboard funtions and calls"""
 # plugboard should map a character to another character.
 # A -> E
 # E -> A
 # This is mapped before the rotors and After the rotors
 # dictionary = hashtable
-class two_way_dict(dict):
+class TwoWayDict(dict):
+    """Class defines a two way dictionary."""
     def __setitem__(self, key, value):
         # Remove any previous connections with these values
         if key in self:
@@ -24,7 +25,7 @@ class two_way_dict(dict):
 
 def set_board():
     """Sets up plugboard"""
-    board = two_way_dict()
+    board = TwoWayDict()
     alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     backwards_alpha = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
     for i in range(0,25):
@@ -50,7 +51,6 @@ def custom_board():
         D -
         E -
     """
-    
 #print("Connecting Plugboard:")
 #choice = input("Use preset settings (y/n) - ")
 
@@ -61,5 +61,3 @@ def custom_board():
 
 
 #print(pb)
-
-
