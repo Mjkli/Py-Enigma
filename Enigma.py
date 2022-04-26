@@ -38,8 +38,9 @@ while 1:
     char = char.upper()
     if char.isalpha():
         char = plugboard_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(
-                plugboard_run(char,pb),rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b),pb)
-    
+                plugboard_run(char,pb)
+                ,rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b),pb)
+
     out.write(str(char))
     rotate_rotor(rotor1,rotor1b)
     if keys % 26 == 0:

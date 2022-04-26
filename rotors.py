@@ -23,7 +23,6 @@ def set_rotors():
     rotor3 = {}
     rotor3b = {}
     reflector = {}
-    
     for i in range(0,26):
         rotor1[alpha[i]] = r1_set[i]
         rotor1b[r1_set[i]] = alpha[i]
@@ -32,31 +31,29 @@ def set_rotors():
         rotor3[alpha[i]] = r3_set[i]
         rotor3b[r3_set[i]] = alpha[i]
         reflector[alpha[i]] = re_set[i]
-    
+
     return rotor1,rotor1b,rotor2,rotor2b,rotor3,rotor3b,reflector
 
-def rotate_rotor(dic,dicb): 
+def rotate_rotor(dic,dicb):
     """function rotates rotors"""
-    l = list(dic.keys())
-    b = list(dicb.keys())
-    temp = dic[l[0]]
-    tempVal = l[l.__len__() - 1]
+    forward = list(dic.keys())
+    backward = list(dicb.keys())
+    temp_key = dic[forward[0]]
+    temp_value = forward[forward.__len__() - 1]
 
     for i in range(0,dic.__len__() - 1):
-        dic[l[i]] = dic[l[i+1]]
-        dic[tempVal] = temp
-    tempkey = b[0]
-    tempVal = dicb[b[dicb.__len__() - 1]]
- 
+        dic[forward[i]] = dic[forward[i+1]]
+        dic[temp_value] = temp_key
+    temp_key = backward[0]
+    temp_value = dicb[backward[dicb.__len__() - 1]]
+
     for i in range(dicb.__len__() - 1, 0, -1):
-        dicb[b[i]] = dicb[b[i-1]]
-                
-    dicb[tempkey] = tempVal
+        dicb[backward[i]] = dicb[backward[i-1]]
 
-
+    dicb[temp_key] = temp_value
 
 
 def rotor_run(char,dic):
     """Gets value of rotor"""
     return dic.get(char)
-                
+
