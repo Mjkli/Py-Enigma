@@ -29,9 +29,9 @@ class TwoWayDict(dict):
 def set_board():
     """Sets up plugboard"""
     board = TwoWayDict()
-    alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    backwards_alpha = "ZYXWVUTSRQPONMLKJIHGFEDCBA"
-    for i in range(0, 25):
+    alpha = "ABCDEFGHIJ"
+    backwards_alpha = "ZYXWVUTSRQ"
+    for i in range(0, 10):
         board[alpha[i]] = backwards_alpha[i]
 
     return board
