@@ -24,12 +24,11 @@ class TwoWayDict(dict):
     def __len__(self):
         #"""Returns the number of connections"""
         return dict.__len__(self) / 2
-    
+
     def get(self,key):
         if key in self:
             return self[key]
-        else:
-            return key
+        return key
 
 
 def set_board():
@@ -37,7 +36,7 @@ def set_board():
     option = input("Would you like to customize the plug board? (Y/n)")
     if(option == 'Y'):
         return custom_board()
-    
+
     board = TwoWayDict()
     alpha = "ABCDEFGHIJ"
     backwards_alpha = "ZYXWVUTSRQ"
@@ -52,6 +51,7 @@ def plugboard_run(char, board):
 
 
 def custom_board():
+    """Sets up a custom board setting"""
     #
     #    Later iterations should have something like this as output for User:
     #    this will help them keep track of what needs connecting.
@@ -65,11 +65,13 @@ def custom_board():
     print("Connecting Plugboard:")
     print("10 cables comes standard with Enigma.")
     print("Input will be like: A <--> B")
+    print("Input 1 to stop adding - Needs to be on Left Character")
     board = TwoWayDict()
-    for i in range(0,10):
+    for _ in range(0,10):
         character_a = input("Enter left character: ")
+        if character_a == '1':
+            break
         character_b = input("Eneter right character: ")
         board.__setitem__(character_a.upper(),character_b.upper())
-    
-    return board
 
+    return board

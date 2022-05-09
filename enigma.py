@@ -11,11 +11,11 @@ from rotors import rotor_run, rotate_rotor, set_rotors
 pb = set_board()
 rotor1, rotor1b, rotor2, rotor2b, rotor3, rotor3b, reflector = set_rotors()
 
-#with open("Unencrypted.txt", 'r', encoding='utf-8') as file, \
-#    open('encrypted.txt', 'w', encoding='utf-8') as out:
+with open("Unencrypted.txt", 'r', encoding='utf-8') as file, \
+    open('encrypted.txt', 'w', encoding='utf-8') as out:
 
-with open('encrypted.txt','r',encoding='utf-8') as file,  \
-  open('un-test.txt','w',encoding='utf-8') as out:
+#with open('encrypted.txt','r',encoding='utf-8') as file,  \
+#  open('un-test.txt','w',encoding='utf-8') as out:
 
     # char = "J"
 
@@ -27,7 +27,8 @@ with open('encrypted.txt','r',encoding='utf-8') as file,  \
         char = char.upper()
         if char.isalpha():
             char =  plugboard_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(
-                    rotor_run(plugboard_run(char,pb),rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b),pb)
+                    rotor_run(plugboard_run(char,pb),rotor1),rotor2),rotor3),reflector)
+                    ,rotor3b),rotor2b),rotor1b),pb)
 
         out.write(str(char))
         rotate_rotor(rotor1, rotor1b)
