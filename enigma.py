@@ -4,12 +4,17 @@
 # build plugboard
 # run file through
 
-from plugboard import set_board, plugboard_run
+import sys
+
+from plugboard import set_board, plugboard_run, test_build
 from rotors import rotor_run, rotate_rotor, set_rotors
 
-# print("Connecting Plugboard:")
-pb = set_board()
+if sys.argv[1] == "test":
+    pb = test_build()
+else:
+    pb = set_board()
 rotor1, rotor1b, rotor2, rotor2b, rotor3, rotor3b, reflector = set_rotors()
+
 
 with open("Unencrypted.txt", 'r', encoding='utf-8') as file, \
     open('encrypted.txt', 'w', encoding='utf-8') as out:

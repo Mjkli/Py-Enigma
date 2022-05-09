@@ -45,6 +45,16 @@ def set_board():
 
     return board
 
+def test_build():
+    board = TwoWayDict()
+    alpha = "ABCDEFGHIJ"
+    backwards_alpha = "ZYXWVUTSRQ"
+    for i in range(0, 10):
+        board[alpha[i]] = backwards_alpha[i]
+
+    return board
+
+
 def plugboard_run(char, board):
     """returns plugboard value"""
     return board.get(char)
