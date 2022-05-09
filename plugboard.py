@@ -22,8 +22,8 @@ class TwoWayDict(dict):
         dict.__delitem__(self, key)
 
     def __len__(self):
-        """Returns the number of connections"""
-        return dict.__len__(self) // 2
+        #"""Returns the number of connections"""
+        return dict.__len__(self) / 2
     
     def get(self,key):
         if key in self:
@@ -34,9 +34,9 @@ class TwoWayDict(dict):
 
 def set_board():
     """Sets up plugboard"""
-    option = input("Would you like to customize the plug board? (Y/n)")
-    if(option == 'Y'):
-        return custom_board()
+    #option = input("Would you like to customize the plug board? (Y/n)")
+    #if(option == 'Y'):
+    #    return custom_board()
     
     board = TwoWayDict()
     alpha = "ABCDEFGHIJ"
@@ -44,16 +44,16 @@ def set_board():
     for i in range(0, 10):
         board[alpha[i]] = backwards_alpha[i]
 
+    #return board
+    board = {'E': 'A', 'K': 'B', 'M': 'C', 'F': 'D', 'L': 'E', 'G': 'F', 'D': 'G', 'Q': 'H', 'V': 'I', 'Z': 'J', 'N': 'K', 'T': 'L', 'O': 'M', 'W': 'N', 'Y':'O', 'H': 'P', 'X': 'Q', 'U': 'R', 'S': 'S', 'P': 'T', 'A': 'U', 'I': 'V', 'B': 'W', 'R': 'X', 'C': 'Y', 'J': 'Z'}
     return board
-    #return board{'E': 'A', 'K': 'B', 'M': 'C', 'F': 'D', 'L': 'E', 'G': 'F', 'D': 'G', 'Q': 'H', 'V': 'I', 'Z': 'J', 'N': 'K', 'T': 'L', 'O': 'M', 'W': 'N', 'Y': 'O', 'H': 'P', 'X': 'Q', 'U': 'R', 'S': 'S', 'P': 'T', 'A': 'U', 'I': 'V', 'B': 'W', 'R': 'X', 'C': 'Y', 'J': 'Z'}
-
 
 def plugboard_run(char, board):
     """returns plugboard value"""
     return board.get(char)
 
 
-def custom_board():
+#def custom_board():
     #
     #    Later iterations should have something like this as output for User:
     #    this will help them keep track of what needs connecting.
