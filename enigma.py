@@ -4,15 +4,15 @@
 # build plugboard
 # run file through
 
-from plugboard import set_board, plugboard_run
+#from plugboard import set_board, plugboard_run
 from rotors import rotor_run, rotate_rotor, set_rotors
 
 # print("Connecting Plugboard:")
-pb = set_board()
+#pb = set_board()
 rotor1, rotor1b, rotor2, rotor2b, rotor3, rotor3b, reflector = set_rotors()
 
-with open("un-test.txt", 'r', encoding='utf-8') as file, open('encrypted.txt', 'w', encoding='utf-8') as out:
-#with open('encrypted.txt','r',encoding='utf-8') as file, open('test.txt','a',encoding='utf-8') as out:
+#with open("Unencrypted.txt", 'r', encoding='utf-8') as file, open('encrypted.txt', 'w', encoding='utf-8') as out:
+with open('encrypted.txt','r',encoding='utf-8') as file, open('un-test.txt','a',encoding='utf-8') as out:
 
     # char = "J"
 
@@ -23,12 +23,7 @@ with open("un-test.txt", 'r', encoding='utf-8') as file, open('encrypted.txt', '
             break
         char = char.upper()
         if char.isalpha():
-            #char = #plugboard_run(
-            print(char)
-            char =  rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(char,rotor1), rotor2), rotor3), reflector), rotor3b), rotor2b), rotor1b)
-                    #plugboard_run(char, pb),
-                    #char,rotor1), rotor2), rotor3), reflector), rotor3b), rotor2b), rotor1b)
-            print(" ")
+            char =  rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(rotor_run(char,rotor1),rotor2),rotor3),reflector),rotor3b),rotor2b),rotor1b)
 
         out.write(str(char))
         rotate_rotor(rotor1, rotor1b)
