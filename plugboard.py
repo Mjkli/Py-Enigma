@@ -44,8 +44,6 @@ def set_board():
     for i in range(0, 10):
         board[alpha[i]] = backwards_alpha[i]
 
-    #return board
-    board = {'E': 'A', 'K': 'B', 'M': 'C', 'F': 'D', 'L': 'E', 'G': 'F', 'D': 'G', 'Q': 'H', 'V': 'I', 'Z': 'J', 'N': 'K', 'T': 'L', 'O': 'M', 'W': 'N', 'Y':'O', 'H': 'P', 'X': 'Q', 'U': 'R', 'S': 'S', 'P': 'T', 'A': 'U', 'I': 'V', 'B': 'W', 'R': 'X', 'C': 'Y', 'J': 'Z'}
     return board
 
 def plugboard_run(char, board):
@@ -64,12 +62,12 @@ def plugboard_run(char, board):
     #    D -
     #    E -
     #
-    print("Connecting Plugboard:")
-    print("10 cables comes standard with Enigma.")
-    print("Input will be like: A <--> B")
-    board = TwoWayDict()
-    for i in range(0,10):
-        character_a = input("Enter left character: ")
-        character_b = input("Eneter right character: ")
-        board.__setitem__(character_a.upper(),character_b.upper())
+    #print("Connecting Plugboard:")
+    #print("10 cables comes standard with Enigma.")
+    #print("Input will be like: A <--> B")
+    #board = TwoWayDict()
+    #for i in range(0,10):
+    #    character_a = input("Enter left character: ")
+    #    character_b = input("Eneter right character: ")
+    #    board.__setitem__(character_a.upper(),character_b.upper())
 

@@ -46,7 +46,7 @@ def rotate_rotor(dic, dicb):
 
     for i in range(0, dic.__len__() - 1):
         dic[forward[i]] = dic[forward[i+1]]
-    
+
     dic[temp_value] = temp_key
     temp_key = backward[0]
     temp_value = dicb[backward[dicb.__len__() - 1]]
