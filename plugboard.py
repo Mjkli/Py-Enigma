@@ -34,7 +34,7 @@ class TwoWayDict(dict):
 def set_board():
     """Sets up plugboard"""
     option = input("Would you like to customize the plug board? (Y/n)")
-    if(option == 'Y'):
+    if option == 'Y':
         return custom_board()
 
     board = TwoWayDict()
@@ -46,6 +46,7 @@ def set_board():
     return board
 
 def test_build():
+    """Used to bypass user input for automatic builds."""
     board = TwoWayDict()
     alpha = "ABCDEFGHIJ"
     backwards_alpha = "ZYXWVUTSRQ"

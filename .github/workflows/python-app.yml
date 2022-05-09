@@ -26,4 +26,3 @@ jobs:
     - name: Run Code
       run: |
         python enigma.py test
-        cat encrypted.txt
