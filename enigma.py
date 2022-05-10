@@ -9,7 +9,7 @@ import sys
 from plugboard import set_board, plugboard_run, test_build
 from rotors import rotor_run, rotate_rotor, set_rotors
 
-if sys.argv[1] == "test":
+if len(sys. argv) > 1:
     pb = test_build()
 else:
     pb = set_board()
