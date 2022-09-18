@@ -83,6 +83,6 @@ def custom_board():
         if character_a == '1':
             break
         character_b = input("Eneter right character: ")
-        board.setitem(character_a.upper(),character_b.upper())
+        board.__setitem__(character_a.upper(),character_b.upper())
 
     return board
