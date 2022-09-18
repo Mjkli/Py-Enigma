@@ -9,6 +9,7 @@
 class TwoWayDict(dict):
     """Class defines a two way dictionary."""
     def setitem(self, key, value):
+        """Sets values in the Two way dictionary"""
         # Remove any previous connections with these values
         if key in self:
             del self[key]
