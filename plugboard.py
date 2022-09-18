@@ -8,7 +8,7 @@
 
 class TwoWayDict(dict):
     """Class defines a two way dictionary."""
-    def __setitem__(self, key, value):
+    def setitem(self, key, value):
         # Remove any previous connections with these values
         if key in self:
             del self[key]
@@ -83,6 +83,6 @@ def custom_board():
         if character_a == '1':
             break
         character_b = input("Eneter right character: ")
-        board.__setitem__(character_a.upper(),character_b.upper())
+        board.setitem(character_a.upper(),character_b.upper())
 
     return board
